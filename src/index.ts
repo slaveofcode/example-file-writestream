@@ -76,6 +76,7 @@ const main = async () => {
         fileGenerator = new XLSXStream(
             './files/file-example.xlsx',
             headers.map(item => (item as Column)),
+            'My Worksheet',
         );
     } 
     
@@ -108,7 +109,7 @@ const main = async () => {
         await new Promise((res) => setTimeout(() => res(true), 1));
     }
 
-    fileGenerator.pack();
+    await fileGenerator.pack();
 
     spinner.text = 'Done.'
     spinner.clear();
