@@ -4,7 +4,6 @@ export class PlainTextStream {
     private file: fs.WriteStream;
 
     constructor(
-        private readonly howMany: number,
         private readonly fileName: string,
     ) {
         this.file = fs.createWriteStream(fileName);

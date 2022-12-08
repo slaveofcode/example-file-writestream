@@ -74,7 +74,6 @@ const main = async () => {
 
     if (caseType === CASE_XSLX) {
         fileGenerator = new XLSXStream(
-            totalGenRows,
             './files/file-example.xlsx',
             headers.map(item => (item as Column)),
         );
@@ -82,7 +81,6 @@ const main = async () => {
     
     if (caseType === CASE_CSV) {
         fileGenerator = new CSVStream(
-            totalGenRows,
             './files/file-example.csv',
             headers,
         );
@@ -90,7 +88,6 @@ const main = async () => {
 
     if (caseType === CASE_TXT) {
         fileGenerator = new PlainTextStream(
-            totalGenRows,
             './files/file-example.txt',
         );
     }

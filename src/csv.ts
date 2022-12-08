@@ -7,7 +7,6 @@ export class CSVStream {
     private indexOfKeyColumn: {[key: number]: string} = {};
 
     constructor(
-        private readonly howMany: number,
         private readonly fileName: string,
         private readonly columns: ColumnFormat[],
         private readonly delimiter: string = ',',

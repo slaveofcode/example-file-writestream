@@ -5,7 +5,6 @@ export class XLSXStream {
     private worksheet: Worksheet;
 
     constructor(
-        private readonly howMany: number,
         private readonly fileName: string,
         private readonly columns: Partial<Column>[],
     ) {
